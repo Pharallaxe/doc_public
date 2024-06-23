@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symfony 6.4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.min.css">
+</head>
+
+<body class="bg-light">
+    <!-- Bouton d'accueil -->
+    <div class="home-button-container">
+        <a href="/" class="background button-common home-button">
+            <i class="bi bi-house-fill"></i>
+        </a>
+    </div>
+
+    <!-- Bouton de changement de couleur -->
+    <div class="color-changer-container"></div>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Documentation (v. 6.4)</h1>
+        <img src="https://symfony.com/logos/symfony_black_03.png" class="card-img-top" alt="Symfony">
+        <div class="card-body d-flex flex-column mt-5 mb-5">
+            <p><strong>Symfony</strong> est un framework open-source pour le développement d'applications web, écrit en
+                PHP. Créé en <strong>2005</strong> par <strong>Fabien Potencier</strong> et développé par
+                <strong>SensioLabs</strong>, il est conçu pour simplifier et accélérer le développement d'applications
+                web robustes et flexibles.
+            </p>
+            <p>Symfony se distingue par sa modularité et son architecture claire, qui permettent aux développeurs de
+                réutiliser des composants existants et de se concentrer sur la logique métier spécifique à chaque
+                projet. Il fournit une large gamme de fonctionnalités prêtes à l'emploi, ce qui facilite la gestion des
+                tâches courantes comme la sécurité, la gestion des formulaires, la validation, et bien plus encore.</p>
+            <p>Utilisé par des milliers de développeurs et de grandes entreprises à travers le monde, Symfony est
+                reconnu pour ses performances élevées et sa capacité à évoluer avec les besoins des applications. Il est
+                également soutenu par une communauté active et dynamique, offrant une documentation complète, des
+                tutoriels, et des ressources pour aider les développeurs à tirer le meilleur parti du framework.</p>
+            <p><strong>Remarque 1</strong> : Le contenu ne doit pas vous dispenser d'une bonne compréhension de ce qui
+                est effectué.</p>
+            <p><strong>Remarque 2</strong> : Vous pouvez copier dans le presse-papier chaque ligne de commande en
+                cliquant dessus. Le
+                copier-coller se fait alors sans ajouter de caractères lors du coller. </p>
+        </div>
+
+        <div id="accordion-container">
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/components.min.js"></script>
+    <script>
+        // Initialiser l'accordéon
+        document.addEventListener("DOMContentLoaded", function () {
+            const accordion = new Accordion('accordion-container', '../json/symfony.min.json');
+            accordion.init();
+        });
+    </script>
+</body>
+
+</html>
